@@ -1,0 +1,10 @@
+var newiframe = document.createElement("iframe");
+newiframe.setAttribute("src", chrome.runtime.getURL("html/pet.html"));
+newiframe.style.width = "100%";
+newiframe.style.top = "0";
+newiframe.style.left = "0";
+newiframe.style.right = "0";
+newiframe.style.position = "absolute";
+newiframe.style.zIndex = "500";
+newiframe.style.height = "80px";
+document.body.appendChild(newiframe);
