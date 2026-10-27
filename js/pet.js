@@ -41,7 +41,7 @@ function stopMoving() {
   clearInterval(interval);
 }
 startMoving();
-
+// startEating();
 // function ratMoving() {
 //   var interval = setInterval(function () {
 //     var div = document.getElementById("ratBody");
