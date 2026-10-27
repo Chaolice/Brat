@@ -1,55 +1,50 @@
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-var canvas = document.querySelector("canvas");
-var drawingSurface = canvas.getContext("2d");
-var spriteObject = {
-  // this is a javascript object variable
-  x: 0,
-  y: 0,
-  width: 64,
-  height: 64,
-};
-var moo = Object.create(spriteObject);
-moo.x = 100;
-moo.y = 100;
-var image = new Image();
-image.addEventListener("load", loadHandler, false);
-image.src = "Rat_01.png";
-var Xspeed = 2;
-var Yspeed = 2;
-var text = "Hello MOO";
-function loadHandler() {
-  update();
+//Add rat movement
+let interval;
+let xDirection = 12;
+let yDirection = 6;
+
+function startMoving() {
+  if (interval) clearInterval(interval);
+
+  interval = setInterval(function () {
+    let ratBodyBox = document.getElementById("ratBody");
+    let container = document.getElementById("tabOverlay");
+
+    let currentLeft = parseInt(ratBodyBox.style.left) || 5;
+    let currentTop = parseInt(ratBodyBox.style.top) || 5;
+    // let ratDirection = ratBodyBox.style.transform;
+
+    // Bounce off walls
+    if (
+      currentLeft >= container.offsetWidth - ratBodyBox.offsetWidth ||
+      currentLeft <= 0
+    ) {
+      xDirection *= -1;
+      ratBodyBox.style.transform = "scale(1,1)";
+    }
+    if (
+      currentTop >= container.offsetHeight - ratBodyBox.offsetHeight ||
+      currentTop <= 0
+    ) {
+      yDirection *= -1;
+    }
+
+    ratBodyBox.style.left = currentLeft + 2 * xDirection + "px";
+    ratBodyBox.style.top = currentTop + 2 * yDirection + "px";
+  }, 20);
 }
-function update() {
-  window.requestAnimationFrame(update, canvas);
-  moo.x += Xspeed;
-  moo.y += Yspeed;
-  if (moo.width + moo.x > 550) {
-    Xspeed = -2;
-    text = "Going Left";
-  } else if (moo.x < 1) {
-    Xspeed = 2;
-    text = "Going Right";
-  } else if (moo.height + moo.y > 400) {
-    Yspeed = -2;
-    text = "Going Up";
-  } else if (moo.y < 1) {
-    Yspeed = 2;
-    text = "Going Down";
-  }
-  render();
+
+function stopMoving() {
+  clearInterval(interval);
 }
-function render() {
-  drawingSurface.clearRect(0, 0, canvas.width, canvas.height);
-  drawingSurface.drawImage(
-    image,
-    Math.floor(moo.x),
-    Math.floor(moo.y),
-    moo.height,
-    moo.width,
-  );
-  drawingSurface.font = "bold 20px Arial";
-  drawingSurface.fillText(text, 10, 30, 200);
-  console.log(drawingSurface.measureText(text).width);
-}
+startMoving();
+// function ratMoving() {
+//   var interval = setInterval(function () {
+//     var div = document.getElementById("ratBody");
+//     div.style.top = div.offsetTop + 1 + "px";
+//     div.style.left = div.offsetLeft + 1 + "px";
+//   }, 50);
+// }
+// ratMoving();
+
+// function ratFollowMouse() {}

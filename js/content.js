@@ -11,19 +11,27 @@
 // document.body.appendChild(newiframe);
 
 const init = function () {
-  const injectElement = document.createElement("div");
-  injectElement.className = "tabOverlay";
-  injectElement.setAttribute("id", "tabOverlay");
-  document.body.appendChild(injectElement);
+  const screenOverlay = document.createElement("div");
+  screenOverlay.className = "tabOverlay";
+  screenOverlay.setAttribute("id", "tabOverlay");
+
+  const ratBody = document.createElement("div");
+  ratBody.className = "ratBody";
+  ratBody.setAttribute("id", "ratBody");
+  document.body.appendChild(ratBody);
+
+  document.body.appendChild(screenOverlay);
 };
 //Runs on pageload
 init();
 
 let overlay = document.getElementById("tabOverlay");
+let rat = document.getElementById("ratBody");
 
 // Turn on the overlay
 function on(opacity) {
   overlay.style.display = "block";
+  rat.style.display = "block";
   overlay.style.opacity = opacity;
 }
 

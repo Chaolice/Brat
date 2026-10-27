@@ -15,3 +15,19 @@ body {
   cursor: pointer; /* Add a pointer on hover */
   pointer-events: none;
 }
+#ratBody {
+  position: fixed; /* Sit on top of the page content */
+  width: 480px; /* Full width (cover the whole page) */
+  height: 480px; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 600; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  pointer-events: none;
+  transform: scale(-1, 1);
+}
+.ratBody {
+  background-image: url(https://i.postimg.cc/fk4xGRhH/Rat.gif);
+}
