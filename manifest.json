@@ -11,6 +11,8 @@
     {
       "matches": ["*://*/*"],
       "js": ["js/content.js"],
+      "css": ["html/style.css"],
+
       "run_at": "document_end"
     }
   ],
