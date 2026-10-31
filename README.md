@@ -1,3 +1,5 @@
+![Pictured is a very simplistic cartoonish animated rat with really big eyes staring at you. It is gray, and its ears, tail and small feet are a dirty shade of pink. There are two frames in the animation, making it look quite jittery.](https://i.postimg.cc/fk4xGRhH/Rat.gif)
+
 # What is Brat?
 
 Brat is a chromium web browser companion that <sub>forces</sub>... encourages you to stay focused on your tasks.
