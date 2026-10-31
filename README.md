@@ -27,6 +27,7 @@ Set what websites are too distracting, and Brat will make sure you face conseque
 - [x] Make Brat walk
 - [x] Make Brat chomp
 - [ ] Set up forbidden website
+- [ ] Keep Brat position persistent accross tabs
 - [ ] Make Brat a house (that it can go to when you're too selfish to share your screen.)
 - [ ] Brat interactions (Petting, following, chasing.)
 - [ ] _Make Brat poop and your mouse picks up the trail_
