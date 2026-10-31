@@ -5,7 +5,7 @@ let yDirection = 3;
 let ratSpeed = 2;
 
 function startMoving(speed) {
-  stopEating();
+  // stopEating();
   if (interval) clearInterval(interval);
 
   interval = setInterval(function () {
@@ -49,7 +49,7 @@ function stopMoving() {
   let ratBodyBox = document.getElementById("ratBody");
   ratBodyBox.style.backgroundImage =
     "url(https://i.postimg.cc/fk4xGRhH/Rat.gif)";
-  startEating();
+  // startEating();
   clearInterval(interval);
 }
 
