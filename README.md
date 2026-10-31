@@ -17,3 +17,17 @@ Set what websites are too distracting, and Brat will make sure you face conseque
 4. On the top right, enable developer mode.
 5. On the top left, click _load unpacked_. Then navigate to the extracted folder.
 6. There you go! Your Brat is ready!
+
+> This extension was made in a few days for the #DigitalPetJam. It is very much more a prototype/demo rather than the full spectrum of what we had planned. Enjoy it regardless!
+
+# Features
+- [x] Add Brat
+- [x] Make Brat walk
+- [x] Make Brat chomp
+- [ ] Set up forbidden website
+- [ ] Make Brat a house (that it can go to when you're too selfish to share your screen.)
+- [ ] Brat interactions (Petting, following, chasing.)
+- [ ] _Make Brat poop and your mouse picks up the trail_
+- [ ] Make Brat more dynamic
+- [ ] Change Brat sprites <sub>(_Maybe not the ones made in about 5 minutes to test it out first, teehee._)</sub>
+- [ ] Add Brat customisation
